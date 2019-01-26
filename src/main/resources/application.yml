@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ms-cloud-task
+logging:  level:    org:
+      springframework:
+        cloud:
+          task: DEBUG
