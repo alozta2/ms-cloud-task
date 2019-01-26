@@ -1,6 +1,17 @@
 spring:
   application:
     name: ms-cloud-task
+  datasource:    url: jdbc:h2:mem:testdb
+#    url: jdbc:h2:tcp://10.0.75.1:9092/test # to create h2 server on local machine java -cp h2-1.4.197.jar org.h2.tools.Server 
+    username: alozta
+    password: alozta
+    driverClassName: org.h2.Driver
+  jpa:    hibernate:      ddl-auto: update
+    properties:      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+  h2:    console:      enabled: true
 logging:  level:    org:
       springframework:
         cloud:
